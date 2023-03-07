@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Linus Torvalds</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg/220px-Lc3_2018_%28263682303%29_%28cropped%29.jpeg"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Page Scroll */
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+
+      .scroll-top.active {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="font-roboto select-none">
+    <!-- Scroll Top btn-->
+    <div
+      class="scroll-top fixed bottom-10 right-8 text-white z-10 invisible opacity-0"
+      onclick="scrollToTop()"
+    >
+      <i
+        class="fa-solid fa-arrow-up bg-blue-700 p-6 rounded-t-full text-white font-bold text-2xl hover:scale-105 hover:bg-opacity-90 hover:shadow-lg hover:text-orange-600"
+      ></i>
+    </div>
+
+    <!-- top bener -->
+    <header class="bg-orange-200 w-full flex justify-center gap-4">
+      <img
+        class="w-[40px]"
+        src="https://icons.iconarchive.com/icons/tatice/operating-systems/256/Linux-icon.png"
+        alt=""
+      />
+      <img class="w-[80px]" src="./images/ubuntu-ar21.svg" />
+    </header>
+
+    <!-- nav-bar -->
+    <nav class="flex justify-between mx-16">
+      <div class="flex items-center gap-2 mt-2">
+        <img src="./images/ubuntu-icon.svg" alt="" />
+        <h1
+          class="text-3xl drop-shadow-2xl text- font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-orange-400 to-orange-600 hover:text-black cursor-pointer"
+        >
+          Linus Torvalds
+        </h1>
+      </div>
+      <ul class="flex gap-5 text-menu-text items-center">
+        <li>
+          <a href="#Overview" class="hover:text-black hover:text-lg"
+            >Overview</a
+          >
+        </li>
+        <li>
+          <a href="#Achievements" class="hover:text-black hover:text-lg"
+            >Achievements</a
+          >
+        </li>
+        <li>
+          <a href="#Resources" class="hover:text-black hover:text-lg"
+            >Resources</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Photo Heading -->
+    <div class="mt-20 flex justify-center text-center text-3xl py-2 font-bold">
+      <h1 class="hover:text-orange-600 cursor-pointer text-center">
+        A PHOTO LINUS TORVALDS
+      </h1>
+    </div>
+
+    <!-- Photo -->
+    <div class="flex m-5 gap-3">
+      <div class="mt-10 w-6/12 hover:opacity-100 hover:scale-y-105">
+        <figure
+          class="w-[100%] relative overflow-hidden hover:scale-105 hover:transition duration-300 ease-in-out hover:drop-shadow-lg"
+        >
+          <img
+            class="w-full bg-cover grayscale shadow-lg object-cover hover:grayscale-0 hover:rounded-lg"
+            src="https://thurrott.s3.amazonaws.com/2018/09/linus-torvalds.jpg"
+            alt="image 6"
+          />
+        </figure>
+      </div>
+
+      <div class="mt-10 w-6/12 hover:opacity-100 hover:scale-y-105">
+        <figure
+          class="w-[100%] relative overflow-hidden hover:scale-105 hover:transition duration-300 ease-in-out hover:drop-shadow-lg"
+        >
+          <img
+            class="w-full bg-cover grayscale shadow-lg object-cover hover:grayscale-0 hover:rounded-lg"
+            src="https://cdn.mos.cms.futurecdn.net/c36cf251721b01243dcafb358fc2973b.jpg"
+            alt="image 6"
+          />
+        </figure>
+      </div>
+    </div>
+
+    <!-- Logo image-->
+    <div class="flex justify-evenly flex-wrap mt-32">
+      <a href="https://ubuntu.com/" target="_blank">
+        <img
+          class="w-[48px] hover:scale-125 transition delay-100 duration-400 ease-in-out bg-transparent"
+          src="https://icons.iconarchive.com/icons/martz90/circle/256/ubuntu-icon.png"
+          alt="logo 1"
+        />
+      </a>
+
+      <a href="https://www.debian.org/" target="_blank">
+        <img
+          class="w-[48px] hover:scale-125 transition delay-100 duration-400 ease-in-out bg-transparent"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/04/Debian_logo.png"
+          alt="logo 2"
+        />
+      </a>
+
+      <a href="https://linuxmint.com/" target="_blank">
+        <img
+          class="w-[48px] hover:scale-125 transition delay-100 duration-400 ease-in-out bg-transparent"
+          src="https://raw.githubusercontent.com/gist/Secret-chest/c92468d6c9d0b89ce490ed1bc557b164/raw/fee0554b8ff5b7370512dc3d44d80cfabe5aeee1/leaf.svg"
+          alt="logo 3"
+        />
+      </a>
+
+      <a href="https://getfedora.org/" target="_blank">
+        <img
+          class="w-[48px] hover:scale-125 transition delay-100 duration-400 ease-in-out bg-transparent"
+          src="https://acf.geeknetic.es/imgri/imagenes/noticias/2019/16787-fedora-quita-soporte-32bits-muestra-1.jpg?f=webp"
+          alt="logo 4"
+        />
+      </a>
+    </div>
+
+    <!-- TextArea -->
+    <div class="w-full flex justify-around mt-32">
+      <div class="w-5/12 m-4 flex flex-col justify-center gap-5 bg-slate-50">
+        <h4
+          id="Overview"
+          class="text-left text-3xl uppercase hover:text-orange-600"
+        >
+          Overview
+        </h4>
+        <p class="leading-8 text-lg">
+          The Linux® kernel is the main component of a Linux operating system
+          (OS) and is the core interface between a computer's hardware and its
+          processes. It communicates between the 2, managing resources as
+          efficiently as possible.
+        </p>
+        <p class="leading-8 text-lg">
+          The kernel is so named because—like a seed inside a hard shell—it
+          exists within the OS and controls all the major functions of the
+          hardware, whether it's a phone, laptop, server, or any other kind of
+          computer.
+        </p>
+      </div>
+      <img
+        class="w-5/12"
+        src="https://upload.wikimedia.org/wikipedia/commons/6/68/Linux_kernel_interfaces.svg"
+        alt="linux karnel"
+      />
+    </div>
+
+    <!-- Table -->
+    <div class="flex justify-center flex-col mx-5 mt-32">
+      <h4 id="Achievements" class="pb-5 text-3xl uppercase">Achievements</h4>
+
+      <table class="md:table-auto border-spacing-5">
+        <thead class="pb-8 border-b-8 border-orange-400">
+          <tr class="bg-orange-200 text-xl tracking-wide">
+            <th class="p-5">year</th>
+            <th class="p-5">MuFacturing</th>
+          </tr>
+        </thead>
+        <tbody class="text-opacity-10 shadow-2xl shadow-slate-500">
+          <tr>
+            <td class="p-5 text-left bg-gray-200">1991</td>
+            <td class="p-5 text-left bg-gray-200">
+              Created the Linux kernel and the version control system Git
+            </td>
+          </tr>
+
+          <tr>
+            <td class="p-5 text-left bg-gray-100">2004</td>
+            <td class="p-5 text-left bg-gray-100">
+              Named one of the "100 Most Influential People in the World" by
+              Time magazine in 2004
+            </td>
+          </tr>
+
+          <tr>
+            <td class="p-5 text-left bg-gray-200">2010</td>
+            <td class="p-5 text-left bg-gray-200">
+              Received an honorary doctorate from the University of Helsinki in
+              2010
+            </td>
+          </tr>
+
+          <tr>
+            <td class="p-5 text-left bg-gray-100">2010</td>
+            <td class="p-5 text-left bg-gray-100">
+              Received the 2010 Millennium Technology Prize and the 2012 Free
+              Software Foundation's Award for the Advancement of Free Software
+            </td>
+          </tr>
+
+          <tr>
+            <td class="p-5 text-left bg-gray-200">2013</td>
+            <td class="p-5 text-left bg-gray-200">
+              Inducted into the Internet Hall of Fame in 2013 for his
+              contributions to the development of the Linux kernel and the
+              creation of Git
+            </td>
+          </tr>
+
+          <tr>
+            <td class="p-5 text-left bg-gray-100">2014</td>
+            <td class="p-5 text-left bg-gray-100">
+              Inducted into the Hall of Fame of the Computer History Museum in
+              2014
+            </td>
+          </tr>
+
+          <tr>
+            <td class="p-5 text-left bg-gray-200">2014</td>
+            <td class="p-5 text-left bg-gray-200">
+              Received the 2015 IEEE Computer Society Computer Pioneer Award
+            </td>
+          </tr>
+
+          <tr>
+            <td class="p-5 text-left bg-gray-100">2019</td>
+            <td class="p-5 text-left bg-gray-100">
+              Received the 2019 ACM SIGOPS Hall of Fame Award
+            </td>
+          </tr>
+
+          <tr2>
+            <td class="p-5 text-left bg-gray-200">2021</td>
+            <td class="p-5 text-left bg-gray-200">
+              Awarded the Takeda Foundation's 2021 Takeda Award for Social
+              Contribution, which recognizes individuals who have made
+              significant contributions to society through technology
+            </td>
+          </tr2>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- link Text -->
+    <div class="flex flex-col ml-5 mt-32">
+      <p>"One of the most influential people in the world."</p>
+      <span>-- Time Magazine The Famous People</span>
+    </div>
+
+    <!-- footer -->
+    <footer class="w-full mt-32 bg-orange-300">
+      <h3 id="Resources" class="text-3xl ml-5">Resources</h3>
+      <span class="ml-5"> Learn more about Linus Torvalds and his work:</span>
+
+      <!-- Bottom navbar -->
+      <nav class="flex justify-between mx-16">
+        <div class="flex items-center gap-2 mt-2">
+          <img src="./images/ubuntu-icon.svg" alt="" />
+          <a
+            href="https://www.quora.com/How-did-Linus-Torvalds-learn-programming"
+            target="_blank"
+          >
+            <h1
+              class="text-3xl drop-shadow-2xl text- font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-orange-400 to-orange-600 hover:text-black cursor-pointer"
+            >
+              Linus Torvalds
+            </h1>
+          </a>
+        </div>
+        <ul class="flex gap-5 text-menu-text items-center">
+          <li>
+            <a href="#Overview" class="hover:text-black hover:text-lg"
+              >Overview</a
+            >
+          </li>
+          <li>
+            <a href="#Achievements" class="hover:text-black hover:text-lg"
+              >Achievements</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <!-- link js file -->
+    <script src="./logic.js"></script>
+    <!-- font -->
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
