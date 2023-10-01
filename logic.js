@@ -1,5 +1,5 @@
+// Scroll Top btn
 const scrollbtn = document.querySelector(".scroll-top");
-
 window.addEventListener('scroll', () => {
      scrollbtn.classList.toggle('active', window.scrollY > 500);
      
@@ -12,3 +12,13 @@ function scrollToTop() {
           behavior: "smooth"
      });
 }
+
+
+// DropDownMenu
+const NavMenu =  document.querySelector('.MenuBtn');
+const hembergun = document.querySelector(".fa-bars");
+
+hembergun.addEventListener('click', () => {
+     hembergun.classList.toggle("fa-xmark");
+     NavMenu.classList.toggle('active');
+});

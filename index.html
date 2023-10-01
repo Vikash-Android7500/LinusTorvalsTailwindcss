@@ -30,82 +30,154 @@
         visibility: visible;
         opacity: 1;
       }
+
+      .MenuBtn.active {
+        left: 0;
+        transition: 0.3s ease-in-out;
+      }
+
     </style>
+
+    <!-- TailwindCss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+            /** @type {import('tailwindcss').Config} */
+      module.exports = {
+        content: ["*"],
+        theme: {
+          extend: {
+            colors: {
+              "regal-blue": "#243c5a",
+              "Header-color": "#c8e6c9",
+              "menu-text": "rgb(14,14,14)",
+              "Text1-color": "#0300a1d8",
+              "Text2-color": "tomato",
+              "Text3-color": "indianred",
+            },
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"]
+            },
+          },
+        },
+        plugins: [],
+        fontFamily: {
+          Whitney: ["Whitney"],
+          Ginto: ["Ginto"],
+          ggSans: ["ggSans"],
+        },
+      };
+
+    </script>
   </head>
-  <body class="font-roboto select-none">
+  <body class="font-roboto select-none bg-gray-50">
+
+    <section class="w-full flex flex-col overflow-hidden">
+
     <!-- Scroll Top btn-->
     <div
       class="scroll-top fixed bottom-10 right-8 text-white z-10 invisible opacity-0"
       onclick="scrollToTop()"
     >
       <i
-        class="fa-solid fa-arrow-up bg-blue-700 p-6 rounded-t-full text-white font-bold text-2xl hover:scale-105 hover:bg-opacity-90 hover:shadow-lg hover:text-orange-600 active:text-white"
+        class="fa-solid fa-arrow-up bg-orange-600 p-3 md:p-6 rounded-t-full text-white text-sm md:text-2xl hover:scale-105 hover:bg-opacity-90 hover:shadow-lg hover:text-black active:text-white"
       ></i>
     </div>
 
-    <!-- top bener -->
-    <header class="bg-orange-200 w-full flex justify-center gap-4">
+    <!-- top Header -->
+    <header class="w-full bg-orange-200 flex justify-center gap-4">
       <img
-        class="w-[40px]"
+        class="w-10"
         src="https://icons.iconarchive.com/icons/tatice/operating-systems/256/Linux-icon.png"
         alt=""
       />
-      <img class="w-[80px]" src="./images/ubuntu-ar21.svg" />
+      <img class="w-20" src="./images/ubuntu-ar21.svg" />
     </header>
 
+      
     <!-- nav-bar -->
-    <nav class="flex justify-between mx-16">
+
+    <div class="w-full flex shadow-xl">
+    <nav class="MenuBtn w-full absolute left-[-100%] top-[70px] duration-200  p-2 bg-white shadow-xl z-40 flex flex-col items-center lg:flex lg:flex-row lg:items-center lg:justify-between lg:static">
       <div class="flex items-center gap-2 mt-2">
-        <img src="./images/ubuntu-icon.svg" alt="" />
+        <img class="h-10 inline" src="./images/ubuntu-icon.svg" alt="" />
         <h1
-          class="text-3xl drop-shadow-2xl text- font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-orange-400 to-orange-600 hover:text-black cursor-pointer"
+          class="whitespace-nowrap font-[Poppins] text-3xl drop-shadow-2xl text- font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-orange-400 to-orange-600 hover:text-black cursor-pointer"
         >
           Linus Torvalds
         </h1>
       </div>
-      <ul class="flex gap-5 text-menu-text items-center">
-        <li>
-          <a href="#Overview" class="hover:text-black hover:text-lg"
+
+   
+      <ul
+        class="font-[Poppins] font-bold flex flex-col items-center gap-3 lg:flex lg:flex-row lg:items-center lg:justify-end bg-white w-full transition-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="#Overview"
+            class="text-xl hover:text-orange-500 duration-200 uppercase"
             >Overview</a
           >
         </li>
-        <li>
-          <a href="#Achievements" class="hover:text-black hover:text-lg"
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="#Achievements"
+            class="text-xl hover:text-orange-500 duration-200 uppercase"
             >Achievements</a
           >
         </li>
-        <li>
-          <a href="#Resources" class="hover:text-black hover:text-lg"
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="#Resources"
+            class="text-xl hover:text-orange-500 duration-200 uppercase"
             >Resources</a
           >
         </li>
+
+        <button
+          class="bg-orange-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-orange-700 rounded self-stretch"
+        >
+          Get started
+      </button>
       </ul>
+
+      
     </nav>
 
+     <!-- Humbarget Option -->
+      <div class="z-40 lg:hidden block m-5 relative left-[80%]">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </div> 
+    </div>
+
+   
+
+ 
+
     <!-- Photo Heading -->
-    <div class="mt-20 flex justify-center text-center text-3xl py-2 font-bold">
-      <h1 class="hover:text-orange-600 cursor-pointer text-center">
+    <div class="mt-20 flex justify-center text-center text-xl md:text-3xl font-bold">
+      <h1 class="hover:text-orange-600 cursor-pointer duration-500">
         A PHOTO LINUS TORVALDS
       </h1>
     </div>
 
     <!-- Photo -->
-    <div class="flex m-5 gap-3">
-      <div class="mt-10 w-6/12 hover:opacity-100 hover:scale-y-105">
+    <div class="flex flex-col items-center w-full lg:flex-row lg:mx-4 gap-3">
+      <div class="mt-10 w-11/12 lg:w-6/12 hover:opacity-100 hover:scale-y-105">
         <figure
           class="w-[100%] relative overflow-hidden hover:scale-105 hover:transition duration-300 ease-in-out hover:drop-shadow-lg"
         >
           <img
             class="w-full bg-cover grayscale shadow-lg object-cover hover:grayscale-0 hover:rounded-lg"
-            src="https://thurrott.s3.amazonaws.com/2018/09/linus-torvalds.jpg"
+            src="https://i.ytimg.com/vi/MShbP3OpASA/maxresdefault.jpg"
             alt="image 6"
           />
         </figure>
       </div>
 
-      <div class="mt-10 w-6/12 hover:opacity-100 hover:scale-y-105">
+      <div class="mt-10 w-11/12 lg:w-6/12 hover:opacity-100 hover:scale-y-105">
         <figure
-          class="w-[100%] relative overflow-hidden hover:scale-105 hover:transition duration-300 ease-in-out hover:drop-shadow-lg"
+          class="w-full relative overflow-hidden hover:scale-105 hover:transition duration-300 ease-in-out hover:drop-shadow-lg"
         >
           <img
             class="w-full bg-cover grayscale shadow-lg object-cover hover:grayscale-0 hover:rounded-lg"
@@ -152,42 +224,47 @@
     </div>
 
     <!-- TextArea -->
-    <div class="w-full flex justify-around mt-32">
-      <div class="w-5/12 m-4 flex flex-col justify-center gap-5 bg-slate-50">
+    <article class="w-full flex flex-col justify-between items-start mt-32 lg:flex-row">
+      <section
+        class="w-full mx-3 flex flex-col justify-center gap-2 bg-slate-100 rounded-md lg:w-1/2"
+      >
         <h4
           id="Overview"
-          class="text-left text-3xl uppercase hover:text-orange-600"
+          class="ml-5 w-0 text-left text-3xl uppercase hover:text-orange-600"
         >
           Overview
         </h4>
-        <p class="leading-8 text-lg">
+        <p class="leading-8 text-lg p-5">
           The Linux® kernel is the main component of a Linux operating system
           (OS) and is the core interface between a computer's hardware and its
           processes. It communicates between the 2, managing resources as
           efficiently as possible.
-        </p>
-        <p class="leading-8 text-lg">
+          <br>
+          <br>
           The kernel is so named because—like a seed inside a hard shell—it
           exists within the OS and controls all the major functions of the
           hardware, whether it's a phone, laptop, server, or any other kind of
           computer.
         </p>
-      </div>
-      <img
-        class="w-5/12"
+       
+      </section>
+      <figure class="w-full p-5 lg:w-1/2">
+        <img
+        class="w-full"
         src="https://upload.wikimedia.org/wikipedia/commons/6/68/Linux_kernel_interfaces.svg"
         alt="linux karnel"
       />
-    </div>
+      </figure>
+    </article>
 
     <!-- Table -->
-    <div class="flex justify-center flex-col mx-5 mt-32">
+    <article class="flex justify-center flex-col mx-2 mt-32">
       <h4 id="Achievements" class="pb-5 text-3xl uppercase">Achievements</h4>
 
-      <table class="md:table-auto border-spacing-5">
-        <thead class="pb-8 border-b-8 border-orange-400">
+      <table class="md:table-auto border-spacing-5 shadow-lg shadow-orange-700">
+        <thead class="pb-8 border-b-8 border-red-400">
           <tr class="bg-orange-200 text-xl tracking-wide">
-            <th class="p-5">year</th>
+            <th class="p-5">year's</th>
             <th class="p-5">MuFacturing</th>
           </tr>
         </thead>
@@ -264,21 +341,21 @@
           </tr2>
         </tbody>
       </table>
-    </div>
+    </article>
 
     <!-- link Text -->
-    <div class="flex flex-col ml-5 mt-32">
-      <p>"One of the most influential people in the world."</p>
-      <span>-- Time Magazine The Famous People</span>
+    <div class="flex flex-col text-center lg:text-left ml-5 mt-32">
+      <p class="text-2xl lg:text-xl">"One of the most influential people in the world."</p>
+      <span class="text-2xl lg:text-xl">-- Time Magazine The Famous People  🙏</span>
     </div>
 
     <!-- footer -->
     <footer class="w-full mt-32 bg-orange-300">
       <h3 id="Resources" class="text-3xl ml-5">Resources</h3>
-      <span class="ml-5"> Learn more about Linus Torvalds and his work:</span>
+      <span class="ml-5 text-xs md:text-xl"> Learn more about Linus Torvalds and his work:</span>
 
       <!-- Bottom navbar -->
-      <nav class="flex justify-between mx-16">
+      <nav class="md:flex md:items-center justify-between mx-5">
         <div class="flex items-center gap-2 mt-2">
           <img src="./images/ubuntu-icon.svg" alt="" />
           <a
@@ -292,14 +369,18 @@
             </h1>
           </a>
         </div>
-        <ul class="flex gap-5 text-menu-text items-center">
-          <li>
-            <a href="#Overview" class="hover:text-black hover:text-lg"
+        <ul class="md:flex gap-5 text-menu-text items-center">
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#Overview"
+              class="text-xl hover:text-orange-500 duration-200 uppercase"
               >Overview</a
             >
           </li>
-          <li>
-            <a href="#Achievements" class="hover:text-black hover:text-lg"
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#Achievements"
+              class="text-xl hover:text-orange-500 duration-200 uppercase"
               >Achievements</a
             >
           </li>
@@ -309,10 +390,13 @@
 
     <!-- link js file -->
     <script src="./logic.js"></script>
+
     <!-- font -->
     <script
       src="https://kit.fontawesome.com/58a810656e.js"
       crossorigin="anonymous"
     ></script>
-  </body>
+
+  </section>
+ </body>
 </html>
